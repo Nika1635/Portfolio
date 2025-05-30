@@ -16,9 +16,9 @@ function goToPage(name){
     }
 }
 
-const boxes = document.querySelectorAll('.box');
+let boxes = document.querySelectorAll('.box');
 
-const observer = new IntersectionObserver((entries) => {
+let observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('show');
@@ -30,3 +30,16 @@ const observer = new IntersectionObserver((entries) => {
 
 boxes.forEach(box => observer.observe(box));
 
+let photos = document.querySelectorAll('.photo');
+
+observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('showPhoto');
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+photos.forEach(photo => observer.observe(photo));
