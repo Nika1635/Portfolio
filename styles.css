@@ -10,7 +10,7 @@
 
 .header{
     animation-name: left;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
     overflow: hidden;
 }
 
@@ -31,7 +31,7 @@
 
 .bottom{
     animation-name: right;
-    animation-duration: 1.7s;
+    animation-duration: 2.2s;
     
 }
 
